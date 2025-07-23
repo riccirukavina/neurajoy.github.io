@@ -1,85 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeuraJoy – Fitness for your Mind</title>
-  <!-- Tailwind CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-50">
+// src/components/HeroSection.tsx
+import { Button } from "@/components/ui/button";
 
-  <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 text-white">
-    <div class="container mx-auto px-6 py-24 flex flex-col items-center text-center">
-      <!-- Logo Placeholder -->
-      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">NeuraJoy</h1>
-      <p class="text-lg md:text-2xl font-light max-w-2xl">Fitness for your Mind</p>
-      <p class="mt-6 max-w-2xl text-base md:text-lg">A 45‑minute, cutting‑edge neurofeedback workout designed to optimize mind, body, and soul.</p>
-      <a href="https://forms.gle/yourwaitlist" class="mt-10 inline-block bg-white text-purple-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl transition">Join the Waitlist</a>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="container mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-12">Why NeuraJoy?</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Meditate like a Monk</h3>
-        <p class="text-gray-600">Reach deep states of calm in minutes with real‑time neurofeedback.</p>
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url(/lovable-uploads/f885ae8b-d1c9-4f95-886e-a9b85811c425.png)'
+        }}
+      />
+      <div className="container mx-auto px-6 py-24 flex flex-col items-center text-center relative z-10">
+        <p className="mt-6 max-w-2xl text-base md:text-lg text-white/80 animate-fade-in [animation-delay:400ms]">
+          A 45‑minute, cutting‑edge neurofeedback workout designed to optimize mind, body, and soul.
+        </p>
       </div>
-      <div class="bg-white p-8 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Heal like a Warrior</h3>
-        <p class="text-gray-600">Reduce stress, PTSD, and ADHD by training your nervous system.</p>
+    </section>
+  );
+};
+
+export default HeroSection;
+
+// src/components/BenefitsSection.tsx
+import { Card, CardContent } from "@/components/ui/card";
+
+const benefits = [
+  {
+    title: "Meditate like a Monk",
+    description: "Reach deep states of calm in minutes with real‑time neurofeedback."
+  },
+  {
+    title: "Heal like a Warrior", 
+    description: "Reduce stress, PTSD, and ADHD by training your nervous system."
+  },
+  {
+    title: "Optimize for Success",
+    description: "Boost focus, creativity, and performance—perfect for entrepreneurs and athletes."
+  }
+];
+
+const BenefitsSection = () => {
+  return (
+    <section className="container mx-auto px-6 py-16">
+      <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+        Why NeuraJoy?
+      </h2>
+      <div className="grid md:grid-cols-3 gap-8">
+        {benefits.map((benefit, index) => (
+          <Card 
+            key={index} 
+            className="p-8 rounded-2xl shadow-neurajoy hover:shadow-neurajoy-lg transition-all duration-300 hover:scale-105 group"
+          >
+            <CardContent className="p-0">
+              <h3 className="text-xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
+                {benefit.title}
+              </h3>
+              <p className="text-neurajoy-gray-600 leading-relaxed">
+                {benefit.description}
+              </p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
-      <div class="bg-white p-8 rounded-2xl shadow-md">
-        <h3 class="text-xl font-semibold mb-2">Optimize for Success</h3>
-        <p class="text-gray-600">Boost focus, creativity, and performance—perfect for entrepreneurs and athletes.</p>
+    </section>
+  );
+};
+
+export default BenefitsSection;
+
+// src/components/StatsSection.tsx
+const stats = [
+  {
+    value: "+19%",
+    label: "Increase in deep sleep"
+  },
+  {
+    value: "−4%", 
+    label: "Lower resting heart rate"
+  },
+  {
+    value: "+30 min",
+    label: "More sleep per night"
+  },
+  {
+    value: "+11%",
+    label: "Increase in HRV"
+  }
+];
+
+const StatsSection = () => {
+  return (
+    <section className="bg-neurajoy-gray-100 py-16">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
+          Proven Results
+        </h2>
+        <div className="grid md:grid-cols-4 gap-8 text-center">
+          {stats.map((stat, index) => (
+            <div key={index} className="group">
+              <p className="text-5xl font-extrabold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                {stat.value}
+              </p>
+              <p className="text-neurajoy-gray-700 leading-relaxed">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 text-center text-neurajoy-gray-600 text-sm max-w-3xl mx-auto">
+          Based on a study of 1,300+ users combining NeuraJoy protocols with wearable data.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
+  );
+};
 
-  <!-- Stats Section -->
-  <section class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Proven Results</h2>
-      <div class="grid md:grid-cols-4 gap-8 text-center">
-        <div>
-          <p class="text-5xl font-extrabold text-purple-600">+19%</p>
-          <p class="mt-2 text-gray-700">Increase in deep sleep</p>
-        </div>
-        <div>
-          <p class="text-5xl font-extrabold text-purple-600">‑4%</p>
-          <p class="mt-2 text-gray-700">Lower resting heart rate</p>
-        </div>
-        <div>
-          <p class="text-5xl font-extrabold text-purple-600">+30&nbsp;min</p>
-          <p class="mt-2 text-gray-700">More sleep per night</p>
-        </div>
-        <div>
-          <p class="text-5xl font-extrabold text-purple-600">+11%</p>
-          <p class="mt-2 text-gray-700">Increase in HRV</p>
-        </div>
+export default StatsSection;
+
+// src/components/CallToActionSection.tsx
+import { Button } from "@/components/ui/button";
+
+const CallToActionSection = () => {
+  return (
+    <section className="container mx-auto px-6 py-20 text-center">
+      <h2 className="text-3xl font-bold mb-6 text-foreground">
+        Ready to train your brain?
+      </h2>
+      <Button 
+        size="lg"
+        className="bg-primary text-primary-foreground font-semibold px-10 py-4 rounded-full shadow-neurajoy-lg hover:shadow-neurajoy hover:scale-105 transition-all duration-300"
+        asChild
+      >
+        <a href="mailto:hello@neurajoy.com">Book a Discovery Call</a>
+      </Button>
+    </section>
+  );
+};
+
+export default CallToActionSection;
+
+// src/components/Footer.tsx
+import { useEffect, useState } from "react";
+
+const Footer = () => {
+  const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
+  return (
+    <footer className="bg-neurajoy-gray-800 text-neurajoy-gray-600 py-8">
+      <div className="container mx-auto px-6 text-center">
+        <p>&copy; {currentYear} NeuraJoy. All rights reserved.</p>
       </div>
-      <p class="mt-8 text-center text-gray-500 text-sm">Based on a study of 1,300+ users combining NeuraJoy protocols with wearable data.</p>
-    </div>
-  </section>
+    </footer>
+  );
+};
 
-  <!-- Call to Action Section -->
-  <section class="container mx-auto px-6 py-20 text-center">
-    <h2 class="text-3xl font-bold mb-6">Ready to train your brain?</h2>
-    <a href="mailto:hello@neurajoy.com" class="inline-block bg-purple-600 text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-purple-700 transition">Book a Discovery Call</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-400 py-8">
-    <div class="container mx-auto px-6 text-center">
-      <p>&copy; <span id="year"></span> NeuraJoy. All rights reserved.</p>
-    </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
-
-</body>
-</html>
+export default Footer;

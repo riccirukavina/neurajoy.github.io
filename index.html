@@ -1,121 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NeuraJoy – Fitness for Your Mind</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Favicon (optional) -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuraJoy – Fitness for your Mind</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-white text-gray-800 flex flex-col">
+<body class="bg-gray-50">
 
-  <!-- Hero (Updated with Image #2) -->
-  <header class="relative min-h-screen bg-black text-white overflow-hidden">
-    <img src="A_digital_graphic_design_for_NeuraJoy,_an_app_focu.png"
-         alt="NeuraJoy sunrise header"
-         class="absolute inset-0 w-full h-full object-cover opacity-95 z-0" />
-
-    <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 text-center flex flex-col items-center justify-center min-h-screen">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-md">
-        NeuraJoy
-      </h1>
-      <p class="max-w-2xl mx-auto text-lg sm:text-xl mb-10 drop-shadow-sm">
-        Fitness for your Mind
-      </p>
-
-      <a href="#waitlist"
-         class="inline-block px-8 py-4 rounded-lg text-white bg-green-500 hover:bg-green-600 focus-visible:ring focus-visible:ring-green-300 transition drop-shadow-lg">
-        Join the Waitlist
-      </a>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 text-white">
+    <div class="container mx-auto px-6 py-24 flex flex-col items-center text-center">
+      <!-- Logo Placeholder -->
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">NeuraJoy</h1>
+      <p class="text-lg md:text-2xl font-light max-w-2xl">Fitness for your Mind</p>
+      <p class="mt-6 max-w-2xl text-base md:text-lg">A 45‑minute, cutting‑edge neurofeedback workout designed to optimize mind, body, and soul.</p>
+      <a href="https://forms.gle/yourwaitlist" class="mt-10 inline-block bg-white text-purple-600 font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-2xl transition">Join the Waitlist</a>
     </div>
-  </header>
+  </section>
 
-  <!-- Features -->
-  <section id="features" class="bg-white">
-    <div class="max-w-6xl mx-auto px-6 py-20 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="text-center">
-        <div class="mx-auto mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-indigo-100">
-          <span class="text-xl">🧘‍♂️</span>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Mental Clarity</h3>
-        <p>Train your brain to stay laser-focused in high-pressure moments.</p>
+  <!-- Benefits Section -->
+  <section class="container mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Why NeuraJoy?</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Meditate like a Monk</h3>
+        <p class="text-gray-600">Reach deep states of calm in minutes with real‑time neurofeedback.</p>
       </div>
-
-      <div class="text-center">
-        <div class="mx-auto mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-indigo-100">
-          <span class="text-xl">🌙</span>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Deeper Sleep</h3>
-        <p>Users report a <strong>19% increase</strong> in deep-sleep duration after 4 weeks.</p>
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Heal like a Warrior</h3>
+        <p class="text-gray-600">Reduce stress, PTSD, and ADHD by training your nervous system.</p>
       </div>
-
-      <div class="text-center">
-        <div class="mx-auto mb-4 h-12 w-12 flex items-center justify-center rounded-full bg-indigo-100">
-          <span class="text-xl">💪</span>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Emotional Resilience</h3>
-        <p>Lower stress reactivity and bounce back from setbacks faster.</p>
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Optimize for Success</h3>
+        <p class="text-gray-600">Boost focus, creativity, and performance—perfect for entrepreneurs and athletes.</p>
       </div>
     </div>
   </section>
 
-  <!-- Metrics / Social Proof -->
-  <section class="bg-indigo-50">
-    <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-      <h2 class="text-2xl sm:text-3xl font-bold mb-8">Why People Choose NeuraJoy</h2>
-
-      <div class="flex flex-wrap justify-center gap-8">
-        <div class="w-40">
-          <p class="text-4xl font-extrabold text-indigo-600">+19%</p>
-          <p class="text-sm">deep sleep<br/>in 30 days</p>
+  <!-- Stats Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Proven Results</h2>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-5xl font-extrabold text-purple-600">+19%</p>
+          <p class="mt-2 text-gray-700">Increase in deep sleep</p>
         </div>
-        <div class="w-40">
-          <p class="text-4xl font-extrabold text-indigo-600">92%</p>
-          <p class="text-sm">report calmer mornings</p>
+        <div>
+          <p class="text-5xl font-extrabold text-purple-600">‑4%</p>
+          <p class="mt-2 text-gray-700">Lower resting heart rate</p>
         </div>
-        <div class="w-40">
-          <p class="text-4xl font-extrabold text-indigo-600">4.8/5</p>
-          <p class="text-sm">average session rating</p>
+        <div>
+          <p class="text-5xl font-extrabold text-purple-600">+30&nbsp;min</p>
+          <p class="mt-2 text-gray-700">More sleep per night</p>
+        </div>
+        <div>
+          <p class="text-5xl font-extrabold text-purple-600">+11%</p>
+          <p class="mt-2 text-gray-700">Increase in HRV</p>
         </div>
       </div>
+      <p class="mt-8 text-center text-gray-500 text-sm">Based on a study of 1,300+ users combining NeuraJoy protocols with wearable data.</p>
     </div>
   </section>
 
-  <!-- Waitlist Form -->
-  <section id="waitlist" class="bg-white">
-    <div class="max-w-md mx-auto px-6 py-20 text-center">
-      <h2 class="text-2xl font-semibold mb-4">Be first to know when we launch</h2>
-
-      <form
-        action="https://formspree.io/f/YOUR_FORM_ID" <!-- Replace with your platform -->
-        method="POST"
-        class="flex flex-col sm:flex-row gap-4">
-        <input type="email" name="email" required placeholder="you@email.com"
-               class="flex-auto px-4 py-3 rounded-md border border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
-        <button type="submit"
-                class="px-6 py-3 rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus-visible:ring focus-visible:ring-indigo-300 transition">
-          Join Waitlist
-        </button>
-      </form>
-
-      <p class="text-xs text-gray-500 mt-4">We’ll send you early-access invites and occasional product updates. No spam.</p>
-    </div>
+  <!-- Call to Action Section -->
+  <section class="container mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6">Ready to train your brain?</h2>
+    <a href="mailto:hello@neurajoy.com" class="inline-block bg-purple-600 text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-purple-700 transition">Book a Discovery Call</a>
   </section>
 
   <!-- Footer -->
-  <footer class="mt-auto bg-gray-50">
-    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between text-sm text-gray-500">
-      <p>&copy; 2025 NeuraJoy Inc.</p>
-      <nav class="flex gap-4 mt-4 sm:mt-0">
-        <a href="#" class="hover:text-gray-700">Privacy</a>
-        <a href="#" class="hover:text-gray-700">Terms</a>
-        <a href="mailto:hello@neurajoy.com" class="hover:text-gray-700">Contact</a>
-      </nav>
+  <footer class="bg-gray-800 text-gray-400 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>&copy; <span id="year"></span> NeuraJoy. All rights reserved.</p>
     </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </footer>
 
 </body>
